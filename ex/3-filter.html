@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div ng-app>
+	
+	<h1>Filter</h1>
+	
+	<fieldset>
+		<legend>String case</legend>
+		<table width="30%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">'mAjIsCuLe' | uppercase</span></td><td>{{'mAjIsCuLe' | uppercase}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'MiNiScUlE' | lowercase</span></td><td>{{'MiNiScUlE' | lowercase}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		<legend>Number</legend>
+		<table width="30%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">1.7833 | number</span></td><td>{{1.7833 | number}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">1.7833 | number:1</span></td><td>{{1.7833 | number:1}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">1.7833 | number:6</span></td><td>{{1.7833 | number:6}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		<legend>Currency</legend>
+		<table width="30%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">159.64 | currency</span></td><td>{{159.64 | currency}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">164.59 | currency : '£'</span></td><td>{{164.59 | currency : '£'}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+		
+	<fieldset>
+		<legend>Date</legend>
+		<table width="30%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">1288323623006 | date</span></td><td>{{1288323623006 | date}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'2010-05-06' | date:'dd MMMM yyyy'</span></td><td>{{'2010-05-06' | date:'dd MMMM yyyy'}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+		
+	<fieldset>
+		<legend>Filter</legend>
+		<table width="40%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'</span></td><td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		<legend>OrderBy</legend>
+		<table width="60%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy</span></td>
+				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true</span></td>
+				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true</span></td>
+				<td>{{[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true}}</td>
+			</tr>
+		</table>		
+	</fieldset>
+	
+	<br />
+		
+	<fieldset>
+		<legend>LimitTo</legend>
+		<table width="60%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2</span></td>
+				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2</span></td>
+				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2}}</td>
+			</tr>
+		</table>		
+	</fieldset>
+	
+</div>
+
+</body>
+</html>

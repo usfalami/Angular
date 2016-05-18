@@ -1,0 +1,6 @@
+.ang::before{
+	content:'{{'
+}
+.ang::after{
+	content:'}}'
+}

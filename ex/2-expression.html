@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div ng-app>
+	
+	<h1>Expression</h1>
+
+	<fieldset>
+		<legend>Numbers</legend>
+		<table width="25%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">9+9</span></td><td>{{9+9}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">9-9</span></td><td>{{9-9}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">9*9</span></td><td>{{9*9}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">9/5</span></td><td>{{9/5}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">9%2</span></td><td>{{9%2}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">(9+3)/2</span></td><td>{{(9+3)/2}}</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		
+		<legend>String</legend>
+		
+		<table width="25%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">'a' + 'b'</span></td><td>'{{'a' + 'b'}}'</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'abc' + ' ' + 'xyz'</span></td><td>'{{'abc' + ' ' + 'xyz'}}'</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'a' + 'b'</span></td><td>'{{'a' + 'b'}}'</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		
+		<legend>Boolean</legend>
+		<table width="25%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">9+9</span></td><td>{{!false}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">false && false</span></td><td>{{false && false}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">true || false</span></td><td>{{true || false}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">5 <= 5.5</span></td><td>{{5 <= 5.5}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'a' > 'b'</span></td><td>{{'a' > 'b'}}</td>
+			</tr>
+		</table>		
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+		
+		<legend>Array</legend>
+		<table width="25%" border="1">
+			<thead>
+				<tr><th>Expression</th><th>Résultat</th></tr>
+			</thead>
+			<tr>
+				<td><span class="ang">[1,2,3,4,5,6][3]</span></td><td>{{[1,2,3,4,5,6][3]}}</td>
+			</tr>
+			<tr>
+				<td><span class="ang">['a','b','c','d'][1]</span></td><td>'{{['a','b','c','d'][1]}}'</td>
+			</tr>
+			<tr>
+				<td><span class="ang">'abcdefjhijk'[0]</span></td><td>'{{'abcdefjhijk'[0]}}'</td>
+			</tr>
+		</table>			
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+	
+		<legend></legend>
+		
+		<div>
+			Not Expression : for, while, if, ...
+		</div>
+		<div>
+			Not Expression : var x = 3
+		</div>
+		<div>
+			Not Expression : new Date()
+		</div>
+		<div>
+			Not Expression : function myFunct(){...}
+		</div>
+		<div>
+			Not Expression : Math.abs(-3)
+		</div>
+		<div>
+			Not Expression : window.alert('message')
+		</div>
+	
+	</fieldset>
+	
+	<br />
+    
+</div>
+
+</body>
+</html>

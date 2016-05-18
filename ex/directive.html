@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="js/angular.min.js"></script>
+	</head>
+	
+	<body ng-app="app">
+	
+		<fieldset>
+			<legend>Languages</legend>
+			<radio name="language" value="c/c++"><i>C/C++</i></radio>
+			<radio name="language" value="java"><i>JAVA</i></radio>
+			<radio name="language" value="c#"><i>C#</i></radio>
+			<radio name="language" value="visualbasic"><i>Visual Basic</i></radio>
+		</fieldset>
+		
+		<br/>
+		
+		<fieldset ng-init="type='radio';s=['html','css','javascript','jQuery','AngularJS']">
+			<legend>Languages</legend>
+			<control-group type="type" name="web" values="s" ></radio-group>
+		</fieldset>
+		
+		<br/>
+		
+		<input type="text" ng-model="n"><button ng-click="s.push(n);n=''">add</button>
+		
+		<button ng-click="type=type==='radio'?'checkbox':'radio'" ng-init="next='checkbox'">{{next}}</button>
+			
+		<script>
+			var a = angular.module("app", [])
+			.directive("radio", function(){
+				return {
+					restrict:'E',
+					transclude : true,
+					replace:true,
+					scope: {name:'@', value:'@'},
+					template : '<label><input type="radio" name="{{name}}" value="{{value}}"><ng-transclude/></label>'
+				}
+			})
+			.directive("controlGroup", function(){
+				return {
+					scope : {name:'@', values:'=', type:'='},
+					template : '<label ng-repeat="v in values track by $index"><input type="{{type}}" name="{{name}}" ng-value="v">{{v}}</label>'
+				}
+			})
+		</script>
+	</body>
+
+</html>

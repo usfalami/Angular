@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myapp" ng-controller="myControl">
+ 	<p>Prénom: <input type="text" ng-model="fname"></p>
+ 	<p>Nom: <input type="text" ng-model="lname"></p>
+ 	<h1 ng-bind-template="{{fname|lowercase}} {{lname|uppercase}}"></h1>
+	<p ng-init="price=5" ng-bind="price|currency : 'MAD'"></p>
+	<my-directive/>
+</div>
+
+<script language="javascript">
+	var app = angular.module('myapp', []);
+	
+	app.controller('myControl', function($scope){
+		$scope.name="hhhhhhh";
+	});
+	
+	app.directive('myDirective', function(){
+		return {
+         'restrict' : "E",
+		 'template':"<h1>myText</h1>",
+		 'replace':true
+		};
+	});
+
+</script>
+
+
+</body>
+</html>
