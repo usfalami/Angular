@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app>
+		<h1>Directive</h1>
+
+		<fieldset>
+			<legend>ngApp</legend>
+			<table width="25%" border="1">
+			<tr>
+				<td>
+					<textarea rows="4" cols="30" disabled ng-non-bindable>
+<div ng-app>
+	{{9+5}}
+</div>
+					</textarea>
+				</td>
+				<td>{{9+5}}</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea rows="4" cols="30" disabled ng-non-bindable>
+<div ng-app="myApp">
+	{{9+5}}
+</div>
+					</textarea>
+				</td>
+				<td>{{9+5}}</td>
+			</tr>
+			</table>
+		</fieldset>
+		
+<br />
+
+		<fieldset>
+			<legend>ngInit</legend>
+			<table width="25%" border="1">
+			<tr>
+				<td>
+					<textarea rows="4" cols="30" disabled ng-non-bindable>
+<div ng-app ng-init="a=9;b=5">
+	{{a*b}}
+</div>
+					</textarea>
+				</td>
+				<td ng-init="a=9;b=5">{{a*b}}</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea rows="4" cols="50" disabled ng-non-bindable>
+<div ng-app ng-init="t=[2,4,5,11,27,65]">
+	{{t.length}}
+</div>
+					</textarea>
+				</td>
+				<td  ng-init="t=[2,4,5,11,27,65]"}">{{t.length}}</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea rows="4" cols="60" disabled ng-non-bindable>
+<div ng-app ng-init="o={fname:'toto', lname:'TITI'}">
+	<b>{{o.fname}}</b>{{o.lname}}
+</div>
+					</textarea>
+				</td>
+				<td ng-init="o={fname:'toto', lname:'TITI'}"><b>{{o.fname}}</b>{{o.lname}}</td>
+			</tr>
+			</table>
+		</fieldset>
+		
+<br />
+		<fieldset>
+			<legend>ngModel</legend>
+			<table width="25%" border="1">
+			<tr>
+				<td>
+					<textarea rows="5" cols="50" disabled ng-non-bindable>
+<div ng-app>
+	<input type="text" ng-model="text">
+	<h3>{{text}}</h3>
+</div>
+					</textarea>
+				</td>
+				<td>
+					<input type="text" ng-model="text">
+					<h3>{{text}}</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea rows="9" cols="60" disabled ng-non-bindable>
+<div ng-app>
+	<select ng-model="lang">
+		<option value="JAVA">JAVA</option> 
+		<option value="JS">JS</option> 
+		<option value="C++">C++</option> 
+	<select>
+	<h3>{{lang}}</h3>
+</div>
+					</textarea>
+				</td>
+				<td>
+					<select ng-model="lang">
+						<option value="JAVA">JAVA</option> 
+						<option value="JS">JS</option> 
+						<option value="C++">C++</option> 
+					<select>
+					<h3>{{lang}}</h3>
+				</td>
+			</tr>
+			
+			</table>
+		</fieldset>
+
+<br />
+
+		<fieldset>
+			<legend>ngBind</legend>
+			<table width="25%" border="1">
+			<tr>
+				<td>
+					<textarea rows="4" cols="50" disabled ng-non-bindable>
+<div ng-app ng-init="msg='un commentaire'">
+	<span ng-bind="msg"></span>
+</div>
+					</textarea>
+				</td>
+				<td ng-init="msg='un commentaire'"><span ng-bind="msg"></span></td>
+			</tr>
+			</table>
+		</fieldset>
+</body>
+</html>
