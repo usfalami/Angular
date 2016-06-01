@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/angular.min.js"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app>
+		<h1>Directives (2)</h1>
+		<fieldset>
+			<legend>ng-href</legend>
+			<table width="75%" >
+			<tr>
+				<td>
+					<textarea rows="5" cols="60" disabled ng-non-bindable>
+<input type="url" ng-model="link">
+<a href="{{link}}" target="_blank">
+  <img src="img/link.png">
+</a>
+					</textarea>
+				</td>
+				<td>
+					<input type="url" ng-model="link">
+					<a href="{{link}}" target="_blank"><img src="img/link.png"></a>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		<br/>
+		
+		<fieldset>
+			<legend>ng-src</legend>
+			<table width="75%" >
+			<tr>
+				<td>
+					<textarea rows="8" cols="60" disabled ng-non-bindable>
+<select ng-model="logo" ng-init="logo='img/default.png'">
+  <option value="img/java.png">JAVA</option>
+  <option value="img/css.png">CSS</option>
+  <option value="img/html.png">HTML</option>
+  <option value="img/angular.png">AngularJS</option>
+</select>
+<img ng-src="logo" alt="{{logo}}">
+					</textarea>
+				</td>
+				<td>
+					<select ng-model="logo" ng-init="logo='img/default.png'">
+						<option value="img/java.png">JAVA</option>
+						<option value="img/css.png">CSS</option>
+						<option value="img/html.png">HTML</option>
+						<option value="img/angular.png">AngularJS</option>
+					</select>
+					<img ng-src="{{logo}}" alt="{{logo}}">
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		<br/>
+		
+		<fieldset>
+			<legend>ng-if | ng-show | ng-hide</legend>
+			<table width="75%" >
+			<tr>
+				<td>
+					<textarea rows="6" cols="60" disabled ng-non-bindable>
+<label><input type="checkbox" ng-model="fr">French</label>
+<label><input type="checkbox" ng-model="en">English</label>
+<h1 ng-if="en">Hello Word</h1>
+<h1 ng-show="fr">Bonjour</h1>
+<h1 ng-hide="fr||en">Empty</h1>
+					</textarea>
+				</td>
+				<td>
+					<label><input type="checkbox" ng-model="fr">French</label>
+					<label><input type="checkbox" ng-model="en">English</label>
+					<h1 ng-if="en">Hello Word</h1>
+					<h1 ng-show="fr">Bonjour</h1>
+					<h1 ng-hide="fr||en">Empty</h1>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		<br/>
+		
+		<fieldset>
+			<legend>ng-repeat</legend>
+			<table width="75%" >
+			<tr>
+				<td>
+					<textarea rows="4" cols="60" disabled ng-non-bindable>
+<ol ng-init="list=['JAVA','HTML','CSS','Angular']">
+  <li ng-repeat="item in list">{{item}}</li>
+</ol>
+					</textarea>
+				</td>
+				<td>
+					<ol ng-init="list=['JAVA','HTML','CSS','Angular']">
+						<li ng-repeat="item in list">{{item}}</li>
+					</ol>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		<br/>
+		
+		
+	</div>
+</body>
+</html>
