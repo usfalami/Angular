@@ -13,107 +13,96 @@
 	
 	<fieldset>
 		<legend>uppercase | lowercase</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">'mAjIsCuLe' | uppercase</span></td><td>{{'mAjIsCuLe' | uppercase}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">'MiNiScUlE' | lowercase</span></td><td>{{'MiNiScUlE' | lowercase}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			'mAjIsCuLe' | uppercase<br/>
+			'MiNiScUlE' | lowercase<br/>
+		</div>
+		<div class="two">
+			'mAjIsCuLe' | uppercase<br/>
+			'MiNiScUlE' | lowercase<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
 		<legend>number</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">1.7833 | number</span></td><td>{{1.7833 | number}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">1.7833 | number:1</span></td><td>{{1.7833 | number:1}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">1.7833 | number:6</span></td><td>{{1.7833 | number:6}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{1.7833 | number}}<br/>
+			{{1.7833 | number:1}}<br/>
+			{{1.7833 | number:6}}<br/>
+		</div>
+		<div class="two">
+			{{1.7833 | number}}<br/>
+			{{1.7833 | number:1}}<br/>
+			{{1.7833 | number:6}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
 		<legend>currency</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">159.64 | currency</span></td><td>{{159.64 | currency}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">164.59 | currency : '£'</span></td><td>{{164.59 | currency : '£'}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{159.64 | currency}}<br/>
+			{{164.59 | currency : '£'}}<br/>
+		</div>
+		<div class="two">
+			{{159.64 | currency}}<br/>
+			{{164.59 | currency : '£'}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
-		
+	
 	<fieldset>
 		<legend>date</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">1288323623006 | date</span></td><td>{{1288323623006 | date}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">'2010-05-06' | date:'dd MMMM yyyy'</span></td><td>{{'2010-05-06' | date:'dd MMMM yyyy'}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{1288323623006 | date}}<br/>
+			{{'2010-05-06' | date:'dd MMMM yyyy'}}<br/>
+		</div>
+		<div class="two">
+			{{1288323623006 | date}}<br/>
+			{{'2010-05-06' | date:'dd MMMM yyyy'}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 		
 	<fieldset>
 		<legend>filter</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'</span></td><td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'}}<br/>
+		</div>
+		<div class="two">
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | filter : 't'}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
 		<legend>orderBy</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy</span></td>
-				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true</span></td>
-				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true</span></td>
-				<td>{{[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true}}</td>
-			</tr>
-		</table>		
+		<div class="two" ng-non-bindable>
+			{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy}}<br/>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true}}<br/>
+			{{[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true}}</br>
+		</div>
+		<div class="two">
+			{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy}}<br/>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | orderBy:'':true}}<br/>
+			{{[{code:5,name:"aaa"},{code:9,name:"fff"},{code:1,name:"sss"}] | orderBy:'code':true}}</br>
+		</div>
 	</fieldset>
-	
 	<br />
-		
+	
 	<fieldset>
-		<legend>orderBy</legend>
-		<table width="75%" >
-			<tr>
-				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2</span></td>
-				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2}}</td>
-			</tr>
-			<tr>
-				<td><span class="ang">'Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2</span></td>
-				<td>{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2}}</td>
-			</tr>
-		</table>		
+		<legend>limitTo</legend>
+		<div class="two" ng-non-bindable>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2}}<br/>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2}}<br/>
+		</div>
+		<div class="two">
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2}}<br/>
+			{{['Paris', 'Toulouse', 'Metz', 'Lyon', 'Argenteuil'] | limitTo:2:2}}<br/>
+		</div>
 	</fieldset>
+	<br />
 	
 </div>
 

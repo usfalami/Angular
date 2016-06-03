@@ -4,3 +4,11 @@
 .ang::after{
 	content:'}}'
 }
+
+div.two{
+float:left;
+width:50%;
+}
+div.parent{
+display:flex;
+}

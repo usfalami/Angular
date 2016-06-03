@@ -10,138 +10,102 @@
 <div ng-app>
 	
 	<h1>Expressions</h1>
-
+	
 	<fieldset>
 		<legend>Numbers</legend>
-		<table width="75%" >
-			<tr>
-				<td><span ng-non-bindable>{{9+5}}</span></td><td>{{9+5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{9-5}}</span></td><td>{{9-5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{9*5}}</span></td><td>{{9*5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{9/5}}</span></td><td>{{9/5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{9%5}}</span></td><td>{{9%5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{(9+5)/2}}</span></td><td>{{(9+5)/2}}</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{9+5}}<br/>
+			{{9-5}}<br/>
+			{{9*5}}<br/>
+			{{9/5}}<br/>
+			{{9%5}}<br/>
+			{{(9+5)/2}}<br/>
+		</div>
+		<div class="two">
+			{{9+5}}<br/>
+			{{9-5}}<br/>
+			{{9*5}}<br/>
+			{{9/5}}<br/>
+			{{9%5}}<br/>
+			{{(9+5)/2}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
-		
 		<legend>String</legend>
 		
-		<table width="75%" >
-			<tr>
-				<td><span ng-non-bindable>{{'a' + 'b'}}</span></td><td>'{{'a' + 'b'}}'</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'abc' + ' ' + 'xyz'}}</span></td><td>'{{'abc' + ' ' + 'xyz'}}'</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'a' + 'b'}}</span></td><td>'{{'a' + 'b'}}'</td>
-			</tr>
-		</table>
+		<div class="two" ng-non-bindable>
+			{{'a' + 'b'}}<br/>
+			{{'abc' + ' ' + 'xyz'}}<br/>
+		</div>
+		<div class="two">
+			{{'a' + 'b'}}<br/>
+			{{'abc' + ' ' + 'xyz'}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
-		
 		<legend>Boolean</legend>
-		<table width="75%" >
-			<tr>
-				<td><span ng-non-bindable>{{!false}}</span></td><td>{{!false}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{false && false}}</span></td><td>{{false && false}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{true || false}}</span></td><td>{{true || false}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{5 <= 5.5}}</span></td><td>{{5 <= 5.5}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'a' > 'b'}}</span></td><td>{{'a' > 'b'}}</td>
-			</tr>
-		</table>		
+		<div class="two" ng-non-bindable>
+			{{!false}}<br/>
+			{{false && false}}<br/>
+			{{true || false}}<br/>
+			{{5 <= 5.5}}<br/>
+			{{'a' > 'b'}}<br/>
+		</div>
+		<div class="two">
+			{{!false}}<br/>
+			{{false && false}}<br/>
+			{{true || false}}<br/>
+			{{5 <= 5.5}}<br/>
+			{{'a' > 'b'}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
-		
 		<legend>Array</legend>
-		<table width="75%" >
-			<tr>
-				<td><span ng-non-bindable>{{[1,2,3,4,5,6][3]}}</span></td><td>{{[1,2,3,4,5,6][3]}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{['a','b','c','d'][1]}}</span></td><td>'{{['a','b','c','d'][1]}}'</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'abcdefjhijk'[0]}}</span></td><td>'{{'abcdefjhijk'[0]}}'</td>
-			</tr>
-		</table>			
+		<div class="two" ng-non-bindable>
+			{{[1,2,3,4,5,6][3]}}<br/>
+			{{['a','b','c','d'][1]}}<br/>
+			{{'abcdefjhijk'[0]}}<br/>
+		</div>
+		<div class="two">
+			{{[1,2,3,4,5,6][3]}}<br/>
+			{{['a','b','c','d'][1]}}<br/>
+			{{'abcdefjhijk'[0]}}<br/>
+		</div>
 	</fieldset>
-	
 	<br />
-	
 		
 	<fieldset>
-		
 		<legend>Condition</legend>
-		<table width="75%" >
-			<tr>
-				<td><span ng-non-bindable>{{true?1:2}}</span></td><td>{{true?1:2}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'0'==0?'Javascript':'JAVA'}}</span></td><td>{{'0'==0?'Javascript':'JAVA'}}</td>
-			</tr>
-			<tr>
-				<td><span ng-non-bindable>{{'0'===0?'Javascript':'JAVA'}}</span></td><td>{{'0'===0?'Javascript':'JAVA'}}</td>
-			</tr>
-		</table>			
+		<div class="two" ng-non-bindable>
+			{{true?1:2}}<br/>
+			{{'0'==0?'Javascript':'JAVA'}}<br/>
+			{{'0'===0?'Javascript':'JAVA'}}<br/>
+		</div>
+		<div class="two">
+			{{true?1:2}}<br/>
+			{{'0'==0?'Javascript':'JAVA'}}<br/>
+			{{'0'===0?'Javascript':'JAVA'}}<br/>
+		</div>			
 	</fieldset>
-	
 	<br />
 	
 	<fieldset>
-	
-		<legend></legend>
-		
+		<legend>Not Expression</legend>
 		<div>
-			Not Expression : for, while, if, ...
+			for, while, if, ... <br/>
+			var x = 3 <br/>
+			new Date() <br/>
+			function myFunct(){...} <br/>
+			Math.abs(-3) <br/>
+			window.alert('message') <br/>
 		</div>
-		<div>
-			Not Expression : var x = 3
-		</div>
-		<div>
-			Not Expression : new Date()
-		</div>
-		<div>
-			Not Expression : function myFunct(){...}
-		</div>
-		<div>
-			Not Expression : Math.abs(-3)
-		</div>
-		<div>
-			Not Expression : window.alert('message')
-		</div>
-	
 	</fieldset>
-	
 	<br />
     
 </div>
