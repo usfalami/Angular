@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<script src="js/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<div ng-app>
@@ -10,54 +11,44 @@
 		
 		<fieldset>
 			<legend>ng-change</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="6" cols="50" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="6" cols="50" disabled>
 <div ng-app>
   <input type="text" ng-change="change=change+1">
   <h3>change : {{change}}</h3>
 </div>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" ng-change="change=change+1" ng-model="model">
-					<h3>change : {{change}}</h3>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" ng-change="change=change+1" ng-model="model">
+				<h3>change : {{change}}</h3>
+			</div>
 		</fieldset>
 		<br/>
 	
 		<fieldset>
 			<legend>ng-click | ng-dblclick</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="6" cols="50" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="6" cols="50" disabled>
 <div ng-app>
   <input type="button" value="ngClick" readonly
     ng-click="clickCount=clickCount+1">
   <h3>{{clickCount}}</h3>
 </div>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" value="Click me" readonly ng-click="click=click+1" ng-dblclick="dbClick=dbClick+1">
-					<h3>click : {{click}}</h3>
-					<h3>dbClick : {{dbClick}}</h3>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" value="Click me" readonly ng-click="click=click+1" ng-dblclick="dbClick=dbClick+1">
+				<h3>click : {{click}}</h3>
+				<h3>dbClick : {{dbClick}}</h3>
+			</div>
 		</fieldset>
 		<br/>
 		
 		<fieldset>
 			<legend>ng-focus | ng-blur</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="8" cols="50" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="8" cols="50" disabled>
 <div ng-app>
   <input type="text"
     style="background-color:{{color}}"
@@ -65,47 +56,39 @@
 	ng-focus="color=green">
   <h3>color : {{color}}</h3>
 </div>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" style="background-color:{{color}}"
-						ng-blur="color='red'" ng-focus="color='green'">
-					<h3>color : {{color}}</h3>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" style="background-color:{{color}}"
+					ng-blur="color='red'" ng-focus="color='green'">
+				<h3>color : {{color}}</h3>
+			</div>
 		</fieldset>
 		<br/>
 				
 		<fieldset>
 			<legend>ng-keyup | ng-keydown | ng-keypress</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="7" cols="50" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="7" cols="50" disabled>
 <div ng-app>
   <input type="text"
 	ng-keydown="event='keydown'"
 	ng-keyup="event='keyup'">
   <h3>event : {{event}}</h3>
 </div>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" ng-keydown="event='keydown'" ng-keyup="event='keyup'" >
-					<h3>event : {{event}}</h3>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" ng-keydown="event='keydown'" ng-keyup="event='keyup'" >
+				<h3>event : {{event}}</h3>
+			</div>
 		</fieldset>
 		<br/>
 						
 		<fieldset>
 			<legend>ng-cut | ng-copy | ng-paste</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="8" cols="50" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="8" cols="50" disabled>
 <div ng-app>
   <input type="text"
 	ng-cut="action='cut'"
@@ -113,14 +96,12 @@
 	ng-paste="action='paste'">
   <h3>action : {{action}}</h3>
 </div>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" ng-cut="action='cut'" ng-copy="action='copy'" ng-paste="action='paste'">
-					<h3>action : {{action}}</h3>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" ng-cut="action='cut'" ng-copy="action='copy'" ng-paste="action='paste'">
+				<h3>action : {{action}}</h3>
+			</div>
 		</fieldset>
 		<br/>	
 		

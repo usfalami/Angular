@@ -10,31 +10,25 @@
 		<h1>Directives (2)</h1>
 		<fieldset>
 			<legend>ng-href</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="5" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="5" cols="60" disabled>
 <input type="url" ng-model="link">
 <a href="{{link}}" target="_blank">
   <img src="img/link.png">
 </a>
-					</textarea>
-				</td>
-				<td>
-					<input type="url" ng-model="link">
-					<a href="{{link}}" target="_blank"><img src="img/link.png"></a>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="url" ng-model="link">
+				<a href="{{link}}" target="_blank"><img src="img/link.png"></a>
+			</div>
 		</fieldset>
 		<br/>
 		
 		<fieldset>
 			<legend>ng-src</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="8" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="8" cols="60" disabled >
 <select ng-model="logo" ng-init="logo='img/default.png'">
   <option value="img/java.png">JAVA</option>
   <option value="img/css.png">CSS</option>
@@ -42,74 +36,62 @@
   <option value="img/angular.png">AngularJS</option>
 </select>
 <img ng-src="logo" alt="{{logo}}">
-					</textarea>
-				</td>
-				<td>
-					<select ng-model="logo" ng-init="logo='img/default.png'">
-						<option value="img/java.png">JAVA</option>
-						<option value="img/css.png">CSS</option>
-						<option value="img/html.png">HTML</option>
-						<option value="img/angular.png">AngularJS</option>
-					</select>
-					<img ng-src="{{logo}}" alt="{{logo}}">
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<select ng-model="logo" ng-init="logo='img/default.png'">
+					<option value="img/java.png">JAVA</option>
+					<option value="img/css.png">CSS</option>
+					<option value="img/html.png">HTML</option>
+					<option value="img/angular.png">AngularJS</option>
+				</select>
+				<img ng-src="{{logo}}" alt="{{logo}}" width="50">
+			</div>
 		</fieldset>
 		<br/>
 		
 		<fieldset>
 			<legend>ng-if | ng-show | ng-hide</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="6" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="6" cols="60" disabled>
 <label><input type="checkbox" ng-model="fr">French</label>
 <label><input type="checkbox" ng-model="en">English</label>
 <h1 ng-if="en">Hello Word</h1>
 <h1 ng-show="fr">Bonjour</h1>
 <h1 ng-hide="fr||en">Empty</h1>
-					</textarea>
-				</td>
-				<td>
-					<label><input type="checkbox" ng-model="fr">French</label>
-					<label><input type="checkbox" ng-model="en">English</label>
-					<h1 ng-if="en">Hello Word</h1>
-					<h1 ng-show="fr">Bonjour</h1>
-					<h1 ng-hide="fr||en">Empty</h1>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<label><input type="checkbox" ng-model="fr">French</label>
+				<label><input type="checkbox" ng-model="en">English</label>
+				<h1 ng-if="en">Hello Word</h1>
+				<h1 ng-show="fr">Bonjour</h1>
+				<h1 ng-hide="fr||en">Empty</h1>
+			</div>
 		</fieldset>
 		<br/>
 		
 		<fieldset>
 			<legend>ng-repeat</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="4" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="4" cols="60" disabled>
 <ol ng-init="list=['JAVA','HTML','CSS','Angular']">
   <li ng-repeat="item in list">{{item}}</li>
 </ol>
-					</textarea>
-				</td>
-				<td>
+			</textarea>
+			</div>
+			<div class="two">
 					<ol ng-init="list=['JAVA','HTML','CSS','Angular']">
 						<li ng-repeat="item in list">{{item}}</li>
 					</ol>
-				</td>
-			</tr>
-			</table>
+			</div>
 		</fieldset>
 		<br/>
 		
 		<fieldset>
 			<legend>ng-switch | ng-switch-when | ng-switch-default</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="9" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="9" cols="60" disabled>
 <input type="number" ng-model="techno">
 <span ng-switch="techno">
   <img src="img/java.png" ng-switch-when="1">
@@ -118,42 +100,36 @@
   <img src="img/angular.png" ng-switch-when="4">
   <img src="img/default.png" ng-switch-default>
 </span>
-					</textarea>
-				</td>
-				<td>
-					<input type="number" ng-model="techno">
-					<span ng-switch="techno">
-						<img src="img/java.png" ng-switch-when="1">
-						<img src="img/html.png" ng-switch-when="2">
-						<img src="img/css.png" ng-switch-when="3">
-						<img src="img/angular.png" ng-switch-when="4">
-						<img src="img/default.png" ng-switch-default>
-					</span>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="number" ng-model="techno">
+				<span ng-switch="techno">
+					<img src="img/java.png" ng-switch-when="1" width="50">
+					<img src="img/html.png" ng-switch-when="2" width="50">
+					<img src="img/css.png" ng-switch-when="3" width="50">
+					<img src="img/angular.png" ng-switch-when="4" width="50">
+					<img src="img/default.png" ng-switch-default width="50">
+				</span>
+			</div>	
 		</fieldset>
 		<br/>	
 
 		<fieldset>
 			<legend>ng-switch | ng-switch-when | ng-switch-default</legend>
-			<table width="75%" >
-			<tr>
-				<td>
-					<textarea rows="4" cols="60" disabled ng-non-bindable>
+			<div class="two" ng-non-bindable>
+				<textarea rows="4" cols="60" disabled>
 <ol ng-init="list=['JAVA','HTML','CSS','Angular']">
   <li ng-repeat="item in list">{{item}}</li>
 </ol>
-					</textarea>
-				</td>
-				<td>
-					<input type="text" ng-model="model" ng-list>
-					<ol>
-						<li ng-repeat="m in model" ng-bind="m"></li>
-					</ol>
-				</td>
-			</tr>
-			</table>
+				</textarea>
+			</div>
+			<div class="two">
+				<input type="text" ng-model="model" ng-list>
+				<ol>
+					<li ng-repeat="m in model" ng-bind="m"></li>
+				</ol>
+			</div>
 		</fieldset>
 		<br/>				
 		
