@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<script src="js/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app="APP">
+		{{'youssef'|myFilter}}
+		{{'YOUSSEF'|myFilter}}
+	</div>
+<script language="javascript">
+	var app = angular.module('APP', []);
+	app.filter('myFilter', function(){
+		return function(str) {
+			return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+		}
+	});
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<script src="js/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app="APP">
+		<fieldset>
+			<legend>controller_1</legend>
+			<div ng-controller="controller_1">
+				<button ng-click="callMyService('controller_1')">call myService</button>
+				<button ng-click="callmyFactory('controller_1')">call myFactory</button>
+			</div>
+		</fieldset>
+		<br/>
+		<fieldset>
+			<legend>controller_2</legend>
+			<div ng-controller="controller_2">
+				<button ng-click="callMyService('controller_2')">call myService</button>
+				<button ng-click="callmyFactory('controller_2')">call myFactory</button>
+			</div>
+		</fieldset>
+	</div>
+<script language="javascript">
+	var app = angular.module('APP', []);
+	
+	app.controller('controller_1', function($scope, myService, myFactory){
+		$scope.callMyService = function(msg){
+			myService.hello(msg);
+		}
+		$scope.callmyFactory = function(msg){
+			myFactory(msg);
+		}
+	});
+	
+	app.controller('controller_2', function($scope, myService, myFactory){
+		$scope.callMyService = function(msg){
+			myService.hello(msg);
+		}
+		$scope.callmyFactory = function(msg){
+			myFactory(msg);
+		}
+	});
+	
+	app.service('myService', function($window){
+		var c =0;
+		this.hello = function(msg){
+			$window.alert('Hello '+ msg + "\n\nNombre d'appel : " + ++c);
+		}
+	});
+	
+	app.factory('myFactory', function($window){
+		var c =0;
+		return function(msg){
+			$window.alert('Hello '+ msg + "\n Nombre d'appel : " + ++c);
+		}
+	});
+	
+</script>
+	
+</body>
+</html>
