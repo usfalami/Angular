@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="APP" ng-controller="control1">
+	<table border="1" ng-if="!error">
+		<tr>
+			<th>Name</th>
+			<th>City</th>
+			<th>Country</th>
+		</tr>
+		<tr ng-repeat="item in items">
+			<td>{{item.Name}}</td>
+			<td>{{item.City}}</td>
+			<td>{{item.Country}}</td>
+		</tr>
+	</table>
+	<div class="color:red" ng-if="error" >Error {{error}}</div>
+</div>
+
+<script language="javascript">
+	var app = angular.module('APP', []);
+	app.controller('control1', function($scope, $http){
+		$http.get('http://www.w3schools.com/angular/customers.php')
+			.success(function(res){
+				$scope.items=res.records;
+			})
+			.error(function(e, s){
+				$scope.error=s;
+				console.log('Error', e, s);
+			});
+	});
+</script>
+	
+</body>
+</html>
+
