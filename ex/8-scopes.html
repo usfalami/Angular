@@ -3,17 +3,53 @@
 <head>
 	<meta charset="utf8">
 	<script src="js/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 	<div ng-app="APP">
-		<div ng-controller="controller_1">
-			<h1>Controller_1</h1>
+		<fieldset ng-controller="controller_1">
+			<legend>Formulaire</legend>
+			<input ng-model="u.firstname" placeholder="first name" type="text"><br/>
+			<input ng-model="u.lastname" placeholder="last name" type="text"><br/>
+			<input ng-model="u.adress" placeholder="adress" type="text"><br/>
+			<input type="button" ng-click="send()" value="Ajouter">
+		</fieldset><br/>
+		<table width="50%" border="1">
+			<thead>
+			<tr>
+				<th>Prénom</th>
+				<th>Nom</th>
+				<th>Adresse</th>
+			</tr>
+			</thead>
+			<tr ng-repeat="user in users">
+				<td>{{user.firstname}}</td>
+				<td>{{user.lastname  | uppercase}}</td>
+				<td>{{user.adress}}</td>
+			</tr>
+		</table><br/>
+		<div ng-controller="controller_2">
+			<fieldset ng-if="users.length>0">
+				<legend>Historique</legend>
+				Dernier : <i>{{users[users.length-1]}}</i>
+				<a href="javascript:" ng-click="remove()">Supprimer</a>
+			</fieldset>
 		</div>
 	</div>
 <script language="javascript">
 	var app = angular.module('APP', []);
-	app.controller('controller_1', function($window){
-		$window.alert('controller_1 loaded');
+	app.controller('controller_1', function($rootScope, $scope){
+		$rootScope.users = [];
+		$scope.send = function(){
+			$rootScope.users.push($scope.u);
+			$scope.u=undefined	;
+		}
+	});
+	app.controller('controller_2', function($rootScope, $scope){
+		$scope.remove = function(){
+			$rootScope.users=$rootScope.users.slice(0, $rootScope.users.length-1);
+		}	
 	});
 </script>
 	

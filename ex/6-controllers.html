@@ -3,17 +3,24 @@
 <head>
 	<meta charset="utf8">
 	<script src="js/angular.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 	<div ng-app="APP">
 		<div ng-controller="controller_1">
 			<h1>Controller_1</h1>
 		</div>
+		<div ng-controller="controller 2">
+			<h1>Controller_2</h1>
+		</div>
 	</div>
 <script language="javascript">
 	var app = angular.module('APP', []);
-	app.controller('controller_1', function($window){
-		$window.alert('controller_1 loaded');
+	app.controller('controller_1', function(){
+		window.alert('controller_1 loaded');
+	});
+	app.controller('controller_2', function(){
+		window.alert('controller_2 loaded');
 	});
 </script>
 	
